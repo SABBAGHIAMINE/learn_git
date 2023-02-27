@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+header{
+    background-color: aliceblue;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+.logo{
+    text-decoration: none;
+    color:steelblue;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+.navigation a{
+    color:steelblue ;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+.navigation a:hover{
+    color: black;
+}
+section{
+    /*padding: 100px 200px;*/
+    background-color: #41588a;   
+}
+.main-prts{
+    display: flex;
+    justify-content: space-between;
+}
+.main-prt1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+    transform: translate(300px,10px);
+}
+.main-img{
+    width: 500px;
+    display: flex;
+    filter: drop-shadow(11px 3px 8px);
+
+}
+.main h2 {
+    font-size: 1.5em;
+    color: white;      
+    font-weight: 500;
+}
+.main h2 span{
+    display: inline-block;
+    margin-top: -11px;
+    font-size: 3em;
+    color: gray;
+    font-weight: 600;
+}
+.main h3 {
+    
+    margin-top: -25px;
+    font-size: 2em;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}   
+.main-btn {
+    color: black;
+    background-color: gray;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 5.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 62px;
+    width: 42%;
+    -webkit-text-stroke: 1px white;
+    transition: 0.7s ease;
+}
+.main-btn:hover{
+    background-color:black ;
+    transform: scale(1.1);
+}
+.social-icon{
+    background-color: black;
+    border-radius: 0% 20% 20% 0%;;
+    font-size: 1.7em;
+    padding-right: 30px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: fixed;
+    top: 40%;
+    visibility: hidden;
+}
+.social-icon:hover{
+    visibility: visible;
+}
+.fa-brands{
+    color: aliceblue;
+    transition: 0.7s ease;
+}
+
+.fa-brands:hover{
+    filter: drop-shadow(11px 3px 8px red);
+    transform:  rotate(1turn);
+}

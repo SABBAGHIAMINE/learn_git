@@ -1,0 +1,24 @@
+ALGORITHM alg_project
+VAR
+    phrase : ARRAY_OF STRING;
+    nbrCar,nbrMot,nbrVow:INTEGER=0;
+BEGIN
+    Write("Saisir laphrase SVP : ");
+    Read(phrase);
+    /***** le nombre de carcteres*****/
+    WHILE (phrase[nbrCar]<>".") DO
+    IF (phrase[nbrCar]==" ") THEN
+        nbrMot=nbrMot+1;
+    END_IF 
+    IF (phrase[nbrCar]=="A" or phrase[nbrCar]=="Y" or phrase[nbrCar]=="E" or phrase[nbrCar]=="I" or phrase[nbrCar]=="O" or phrase[nbrCar]=="U") THEN
+        nbrVow=nbrVow+1;
+    END_IF 
+    nbrCar=nbrCar+1;
+    END_WHILE
+    nbrCar=nbrCar+1;
+    nbrMot=nbrMot+1;
+    Write("Le nombre des caracteres est ");
+    Write(nbrCar);
+    Write("Le nombre des mots est ");
+    Write(nbrMot);
+    END

@@ -1,0 +1,106 @@
+
+//************** Part 1*******************************
+ALGORITHM check_point_algo_2
+VAR
+    set1 : ARRAY_OF INTEGER[4]:=[3,7,1,9];
+    set2 : ARRAY_OF INTEGER[5]:=[2,4,1,9,3];
+    i,j,k,som:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO set1.LENGTH-1 STEP 1  DO
+        
+        FOR k FROM 0 TO set1.LENGTH-1 STEP 1  DO
+            k:=0;
+            IF (k==i) THEN
+                k:=k+1;
+            ELSE
+               IF (compare(set1[i],set1[k])==true) THEN
+                k:=k+1;
+               ELSE
+                BREAK;
+               END_IF 
+            END_IF
+        END_FOR
+            j:=0;
+            FOR j FROM 0 TO set2.LENGTH-1 STEP step  DO
+                IF (compare(set1[i],set2[j])==true) THEN
+                    som=som+set1[i];
+                ELSE
+                    BREAK;
+                END_IF
+            END_FOR
+    END_FOR
+        i,j,k:=0;
+        FOR i FROM 0 TO set2.LENGTH-1 STEP 1  DO
+        
+        FOR k FROM 0 TO set2.LENGTH-1 STEP 1  DO
+            k=0;
+            IF (k==i) THEN
+                k:=k+1;
+            ELSE
+               IF (compare(set2[i],set2[k])==true) THEN
+                k:=k+1;
+               ELSE
+                BREAK;
+               END_IF 
+            END_IF
+        END_FOR
+            j:=0;
+            FOR j FROM 0 TO set1.LENGTH-1 STEP step  DO
+                IF (compare(set2[i],set1[j])==true) THEN
+                    som=som+set2[i];
+                ELSE
+                    BREAK;
+                END_IF
+            END_FOR
+    END_FOR
+END
+FUNCTION compare(a,b:INTEGER) : BOOLEAN
+
+BEGIN
+    IF (a==b) THEN
+        RETURN false;
+    ELSE
+        RETURN true;
+    END_IF
+END
+
+
+//*********************************************part 2 *************************************************
+
+
+ALGORITHM checkpoint_part2_1
+VAR
+    v1,v2 : ARRAY_OF INTEGER[2];
+BEGIN
+    dot_product(v1,v2)
+;    IF (ps==0) THEN
+        Write("Ces deux vecteurs sont orthogonaux");
+    ELSE
+        Write(ps);
+    END_IF
+END
+
+PROCEDURE dot_product(v1,v2 : ARRAY_OF INTEGER[2],var ps:INTEGER)
+BEGIN
+    ps:=0;
+    ps=v1[0]*v2[0]+v1[1]*v2[1];
+END
+
+
+    FUNCTION dot_product(v1,v2 : ARRAY_OF INTEGER[2]) : INTEGER
+  
+    BEGIN
+        RETURN v1[0]*v2[0]+v1[1]*v2[1] ;
+    END
+
+
+    ALGORITHM checkpoint_part2_2
+VAR
+    v1,v2 : ARRAY_OF INTEGER[2];
+BEGIN
+   IF (dot_product(v1,v2)=0) THEN
+        Write("Ces deux vecteurs sont orthogonaux");
+    ELSE
+        Write(ps);
+    END_IF
+END

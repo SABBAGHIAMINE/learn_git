@@ -9,16 +9,16 @@ BEGIN
     FOR i FROM 0 TO set1.LENGTH-1 STEP 1  DO
         
         FOR k FROM 0 TO set1.LENGTH-1 STEP 1  DO
-            k:=0;
             IF (k==i) THEN
                 k:=k+1;
             ELSE
-               IF (compare(set1[i],set1[k])==true) THEN
-                k:=k+1;
-               ELSE
+               IF (compare(set1[i],set1[k])<>true) THEN
                 BREAK;
+                ELSE
+                k=k+1
                END_IF 
             END_IF
+
         END_FOR
             j:=0;
             FOR j FROM 0 TO set2.LENGTH-1 STEP step  DO
@@ -33,7 +33,6 @@ BEGIN
         FOR i FROM 0 TO set2.LENGTH-1 STEP 1  DO
         
         FOR k FROM 0 TO set2.LENGTH-1 STEP 1  DO
-            k=0;
             IF (k==i) THEN
                 k:=k+1;
             ELSE

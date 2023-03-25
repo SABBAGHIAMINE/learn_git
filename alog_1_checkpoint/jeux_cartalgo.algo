@@ -1,0 +1,40 @@
+ALGORITHM jeux_cart
+VAR
+    tab : ARRAY_OF INTEGER[5];:= {12, 11, 13, 5, 6};
+BEGIN
+    insertionSort(arr);
+    printArray(arr);
+END
+
+    PROCEDURE swap(VAR xp, VAR yp : INTEGER)
+    VAR
+        tmp : INTEGER;
+    BEGIN
+        tmp := xp;
+        xp := yp;
+        yp := tmp;
+    END
+
+
+    PROCEDURE insertionSort(VAR tab : ARRAY_OF INTEGER)
+        VAR
+            i,j,n : INTEGER;
+        BEGIN
+            n := tab.length;
+            FOR i FROM 0 TO n- 1 STEP 1  DO
+                j = i
+                while ((j > 0) and (A[j-1] > A[j])) do
+                    swap(A[j], A[j-1])
+                    j = j - 1
+                end while
+            END_FOR
+        END
+
+    PROCEDURE affichir(VAR tab : ARRAY_OF INTEGER)
+    VAR
+        i,n:INTEGER;
+    BEGIN
+        FOR i FROM 0 TO n- 1 STEP 1  DO
+        Write(tab[i]);
+        END_FOR
+    END

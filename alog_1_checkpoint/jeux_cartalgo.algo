@@ -2,8 +2,8 @@ ALGORITHM jeux_cart
 VAR
     tab : ARRAY_OF INTEGER[5];:= {12, 11, 13, 5, 6};
 BEGIN
-    insertionSort(arr);
-    printArray(arr);
+    insertionSort(tab);
+    affichir(tab);
 END
 
     PROCEDURE swap(VAR xp, VAR yp : INTEGER)

@@ -18,7 +18,7 @@
         IF (tab[i]<>tab[j]) THEN
             RETURN false;
         END_IF
-        IF (i<e+1) THEN
+        IF (i<j+1) THEN
             RETURN isPalRec(tab, i + 1, j - 1);
         END_IF
         RETURN true ;

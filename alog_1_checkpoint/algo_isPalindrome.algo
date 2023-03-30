@@ -1,0 +1,35 @@
+
+    ALGORITHM isPalindrome
+    VAR
+        tab : ARRAY_OF STRING:="geeg";
+    BEGIN
+        IF (isPalindrome(tab)==true) THEN
+            Write("Le mot est Palindrome ");
+        ELSE
+            Write("Le mot n'est pas Palindrome ");
+        END_IF
+    END
+    
+    FUNCTION isPalRec(tab : ARRAY_OF STRING;i,j:INTEGER) : BOOLEAN
+    BEGIN
+        IF (i==j) THEN
+            RETURN true;
+        END_IF
+        IF (tab[i]<>tab[j]) THEN
+            RETURN false;
+        END_IF
+        IF (i<e+1) THEN
+            RETURN isPalRec(tab, i + 1, j - 1);
+        END_IF
+        RETURN true ;
+    END
+
+    FUNCTION isPalindrome(tab : ARRAY_OF STRING) : BOOLEAN
+    VAR
+        n:INTEGER:=tab.length;
+    BEGIN
+        IF (n==0) THEN
+            RETURN true;
+        END_IF
+        RETURN isPalRec(tab, 0, n - 1); ;
+    END
